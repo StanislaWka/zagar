@@ -54,17 +54,6 @@ export function Footer() {
   return (
     <Box bgcolor="black" css={styles.footerStyles} component="footer">
       <CopyrightLogo />
-      <Box
-        css={styles.mottoStyles}
-        display={{ xs: "flex", sm: "flex", md: "none", lg: "flex" }}
-      >
-        <Typography variant="body2" color="neutral.main">
-          We love building awesome apps
-        </Typography>
-        <Typography variant="body2" color="neutral.main">
-          Creating beautiful, usable products engineered to perform
-        </Typography>
-      </Box>
       <Container maxWidth="sm" css={styles.containerStyle}>
         <Box css={styles.contactsInfoWrapperStyles}>
           <Box>
@@ -75,10 +64,9 @@ export function Footer() {
               onClick={handleScrollTop}
               css={styles.hoverableTypography}
             >
-              Contacts
+              Контакты
             </Typography>
           </Box>
-
           <Box
             ml={10}
             display={{ xs: "none", sm: "none", md: "flex", lg: "flex" }}

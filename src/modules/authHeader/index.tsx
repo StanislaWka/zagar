@@ -8,6 +8,7 @@ import { APP_ROUTES } from "constants/appRoutes";
 import styles from "./styles";
 import { StyledBurgerMenu } from "./burgerMenu";
 import { ButtonsMenu } from "modules/buttonsMenu";
+import { RecordButton } from "components/recordButton";
 
 interface AuthHeaderProps {}
 
@@ -31,6 +32,7 @@ export function AuthHeader(props: AuthHeaderProps) {
           <Box component="div" css={styles.navigationBox}>
             <ButtonsMenu />
           </Box>
+          <RecordButton />
           <Typography sx={{ width: "100%", textAlign: "right" }}>
             ул. Притыцкого 34 1 подъезд 1 этаж ст.м. Пушкинская
           </Typography>

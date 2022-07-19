@@ -28,9 +28,9 @@ const menuStyles = css({
 });
 
 const linkStyle = css({
-  textDecoration: 'none',
+  textDecoration: 'none!important',
   lineHeight: '2',
-  color: '#004ED7',
+  color: '#FFF',
 });
 
 const boxStyle = css({

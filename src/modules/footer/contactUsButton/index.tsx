@@ -20,7 +20,7 @@ export function ContactUs({ onClick }: ContactUsProps) {
         to={APP_ROUTES.CONTACT}
         css={styles.linkStyle}
         onClick={onClick}>
-        <Button css={styles.contactButton}>Contact us</Button>
+        <Button css={styles.contactButton}>Связаться с нами</Button>
       </Typography>
     </Box>
   );

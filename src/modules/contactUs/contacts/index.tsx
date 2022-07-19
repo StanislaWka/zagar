@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 
 import React from "react";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import {
   Email as EmailIcon,
   HomeOutlined as HomeOutlinedIcon,
@@ -21,12 +21,9 @@ export function Contacts(props: HomeProps) {
             <HomeOutlinedIcon />
           </Box>
           <Box css={styles.homeAddressContainerStyle}>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
-              recusandae consequuntur officiis facilis odit ipsum quo ullam
-              repellat nesciunt, nostrum impedit libero incidunt, minima est!
-              Laudantium soluta minus porro corrupti!
-            </p>
+            <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+              Минск, ул. Притыцкого, 34 1 подъезд 1 этаж ст. метро Пушкинская
+            </Typography>
           </Box>
         </Box>
         <Box css={styles.contactInfoContainerStyle}>
@@ -34,26 +31,19 @@ export function Contacts(props: HomeProps) {
             <EmailIcon />
           </Box>
           <Box css={styles.emailContainerStyle}>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
-              recusandae consequuntur officiis facilis odit ipsum quo ullam
-              repellat nesciunt, nostrum impedit libero incidunt, minima est!
-              Laudantium soluta minus porro corrupti!
-            </p>
+            <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+              nastia53334@mail.ru
+            </Typography>
           </Box>
         </Box>
         <Box css={styles.contactInfoContainerStyle}>
           <Box>
             <PhoneOutlinedIcon />
           </Box>
-          <Box css={styles.phoneContainerStyle}>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
-              recusandae consequuntur officiis facilis odit ipsum quo ullam
-              repellat nesciunt, nostrum impedit libero incidunt, minima est!
-              Laudantium soluta minus porro corrupti!
-            </p>
-          </Box>
+          <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+            +375 (33) 301-61-45
+          </Typography>
+          <Box css={styles.phoneContainerStyle}></Box>
         </Box>
       </Box>
       <Box css={styles.socialIconsContainerStyle}>
