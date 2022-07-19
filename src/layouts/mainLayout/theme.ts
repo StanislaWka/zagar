@@ -13,7 +13,7 @@ export const theme = createTheme({
       main: rootStyles.colors.eerieBlack,
     },
     neutral: {
-      main: rootStyles.colors.cultured,
+      main: rootStyles.colors.white,
     },
   },
 });
