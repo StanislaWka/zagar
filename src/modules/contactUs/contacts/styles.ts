@@ -51,6 +51,12 @@ const socialIconStyle = css({
   transition: 'all 0.2s ease',
 });
 
+const linkStyle = css({
+  textDecoration: 'none',
+  lineHeight: '2',
+  color: '#000',
+});
+
 const styles = {
   contactsWrapperStyle,
   contactsStyle,
@@ -61,6 +67,7 @@ const styles = {
   socialIconsContainerStyle,
   socialIconContainerStyle,
   socialIconStyle,
+  linkStyle,
 };
 
 export default styles;

@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Link, Typography } from "@mui/material";
 import {
   Email as EmailIcon,
   HomeOutlined as HomeOutlinedIcon,
@@ -40,9 +40,11 @@ export function Contacts(props: HomeProps) {
           <Box>
             <PhoneOutlinedIcon />
           </Box>
-          <Typography variant="h6" sx={{ fontWeight: "bold" }}>
-            +375 (33) 301-61-45
-          </Typography>
+          <Link href="tel:+375333016145" css={styles.linkStyle}>
+            <Typography variant="h6" sx={{ fontWeight: "bold", textDecoration: 'none' }}>
+              +375 (33) 301-61-45
+            </Typography>
+          </Link>
           <Box css={styles.phoneContainerStyle}></Box>
         </Box>
       </Box>
