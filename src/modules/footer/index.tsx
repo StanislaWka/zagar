@@ -90,7 +90,7 @@ export function Footer() {
               <Box css={styles.iconBoxStyle}>
                 <IconButton
                   target="_blank"
-                  href="https://www.linkedin.com/company/sunmait/"
+                  href=""
                 >
                   <LinkedIn css={styles.iconStyles} color="secondary" />
                 </IconButton>
@@ -98,7 +98,7 @@ export function Footer() {
               <Box css={styles.iconBoxStyle}>
                 <IconButton
                   target="_blank"
-                  href="https://www.facebook.com/sunmait.tech/"
+                  href=""
                 >
                   <Facebook css={styles.iconStyles} color="secondary" />
                 </IconButton>
@@ -106,7 +106,7 @@ export function Footer() {
               <Box css={styles.iconBoxStyle}>
                 <IconButton
                   target="_blank"
-                  href="https://twitter.com/SunmaitTech"
+                  href=""
                 >
                   <Twitter css={styles.iconStyles} color="secondary" />
                 </IconButton>
