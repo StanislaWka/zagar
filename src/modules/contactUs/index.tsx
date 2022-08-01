@@ -4,6 +4,8 @@ import { Box } from "@mui/material";
 
 import { Contacts } from "./contacts";
 import styles from "./styles";
+import vebinar from "../../assets/vebinar.png";
+import { RecordButton } from "components/recordButton";
 
 interface HomeProps {}
 
@@ -13,6 +15,20 @@ export function ContactUsLayout(props: HomeProps) {
       <Box css={styles.welcomeContainerStyle}>
         <Box css={styles.welcomeTextStyle} className="welcomeText">
           <h2 css={styles.welcomeTextTitleStyle}>О НАС!</h2>
+        </Box>
+      </Box>
+      <Box css={styles.mapsTitleContainerStyle}>
+        <h1>ЗАПИСАТЬСЯ НА БЕСПЛАТНЫЙ ВЕБИНАР</h1>
+      </Box>
+      <Box css={styles.wrapperVebinarStyle}>
+        <Box
+          css={styles.vebinarStyle}
+          component="img"
+          alt="vebinar"
+          src={vebinar}
+        />
+        <Box>
+          <RecordButton />
         </Box>
       </Box>
       <Contacts />

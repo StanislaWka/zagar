@@ -14,6 +14,17 @@ interface MenuFieldsProps {
 export function MenuFields({ clickHandler, buttonsArray }: MenuFieldsProps) {
   return (
     <Box css={styles.styledMenu}>
+      <Typography
+        css={styles.menuItemStyle}
+        sx={{
+          width: "100%",
+          textDecoration: "none",
+          marginBottom: "20px",
+          borderBottom: "1px solid #E0E0E0",
+        }}
+      >
+        ул. Притыцкого 34 1 подъезд 1 этаж ст.м. Пушкинская
+      </Typography>
       {buttonsArray.map(({ path, value, action }: ButtonsProps) => (
         <Link key={path} to={path} css={styles.linkStyle}>
           <Typography

@@ -12,21 +12,22 @@ const flexStyle = css(
   mq({
     display: "flex",
     flexDirection: ["column", "column", "row"],
-    marginBottom: '100px'
+    marginBottom: "100px",
   })
 );
 
 const descriptionStyle = css({
-    minHeight: '100px',
-    marginBottom: '20px',
-    textAlign: 'left',
-})
+  minHeight: "100px",
+  marginBottom: "20px",
+  textAlign: "left",
+});
 
 const BoxStyle = css(
-    {
-        marginRight: '100px'
-    }
-)
+  mq({
+    marginRight: ["0px", "0px", "100px"],
+    marginBottom: ["60px", "60px", "0px"],
+  })
+);
 
 const flexCostStyle = css(
   mq({
@@ -39,10 +40,16 @@ const flexCostStyle = css(
 const mainBoxStyles = css(
   mq({
     borderBottom: `1px solid ${colors.cultured}`,
-    marginBottom: '15px'
+    marginBottom: "15px",
   })
 );
 
-const styles = { flexStyle, flexCostStyle, mainBoxStyles, BoxStyle, descriptionStyle};
+const styles = {
+  flexStyle,
+  flexCostStyle,
+  mainBoxStyles,
+  BoxStyle,
+  descriptionStyle,
+};
 
 export default styles;

@@ -33,7 +33,7 @@ export function AuthHeader(props: AuthHeaderProps) {
             <ButtonsMenu />
           </Box>
           <RecordButton />
-          <Typography sx={{ width: "100%", textAlign: "right" }}>
+          <Typography css={styles.addressStyle} sx={{ width: "100%", textAlign: "right" }}>
             ул. Притыцкого 34 1 подъезд 1 этаж ст.м. Пушкинская
           </Typography>
         </Box>
