@@ -8,6 +8,8 @@ import example7 from "assets/exmp7.png";
 import example8 from "assets/exmp8.png";
 
 import styles from "./styles";
+import { Link } from "react-router-dom";
+import { APP_ROUTES } from "constants/appRoutes";
 
 export const mainData = {
   usersComments: [
@@ -121,11 +123,55 @@ export const mainData = {
         "4. Не используем скраб-мочалку,не посещайте сауны,бани и горячие ванны на момент носки загара",
       ],
     },
+    {
+      id: 8,
+      question: "Пиллинг",
+      answer: [
+        "Пилинг — это база перед загаром.",
+        "Он увлажняет кожу, продлевает жизнь загару, выравнивает ph кожи. Это как база под лосьон для загара.",
+      ],
+    },
+    {
+      id: 9,
+      question: "Опудривание",
+      answer: [
+        "Опудривание — это фиксация загара.",
+        "Пудра фиксирует загар после процедуры, убирает липкость, даёт мерцание кожи небольшими блесточками как «хайлайтер для лица» и приятный аромат бонусом!",
+      ],
+    },
+    {
+      id: 10,
+      question: "Стикини",
+      answer: [
+        "Стикини — наклейки для защиты, применяемые при загаре.",
+        "Основанием для любых стикини служит специальная силиконизированная бумага или же синтетическая плёнка.",
+        "Они безопасны и безвредны для тела.",
+        "Служат защитой для чувствительной зоны «сосков».",
+      ],
+    },
+    {
+      id: 11,
+      question: "Капли усилитили",
+      answer: [
+        "Капли-усилитель для загара — это насыщение оттенка загара.",
+        "Будет более ярко и потемнее.",
+      ],
+    },
   ],
   services: [
-    { id: 1, title: "О нас", description: "Text text text text" },
-    { id: 2, title: "Цены", description: "Text text text text" },
-    { id: 3, title: "Обучение", description: "Text text text text" },
+    {
+      id: 1,
+      title: "О нас",
+      description: "Text text text text",
+      link: APP_ROUTES.CONTACT,
+    },
+    { id: 2, title: "Цены", description: "Text text text text", link: "" },
+    {
+      id: 3,
+      title: "Обучение",
+      description: "Text text text text",
+      link: APP_ROUTES.EDUCATION,
+    },
     {
       id: 4,
       title: "Часто Задаваемые Вопросы",
@@ -156,12 +202,20 @@ export function Services() {
                   <h3 css={styles.serviceTitleTextStyle}>{s.title}</h3>
                 </Box>
               </Box>
-              <Box
-                css={styles.serviceTextContainerStyle}
-                className="serviceText"
+              <Link
+                key={s.link}
+                to={{
+                  pathname: s.link,
+                }}
+                css={styles.linkStyle}
               >
-                <p>{s.description}</p>
-              </Box>
+                <Box
+                  css={styles.serviceTextContainerStyle}
+                  className="serviceText"
+                >
+                  <p>{s.description}</p>
+                </Box>
+              </Link>
             </Box>
           );
         })}

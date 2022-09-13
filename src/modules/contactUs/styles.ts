@@ -82,6 +82,42 @@ const wrapperVebinarStyle = css(
   })
 );
 
+const aboutUsText = css({
+  background: "white",
+  margin: "1px",
+  padding: "10px",
+  fontWeight: '200',
+  fontSize: '19px',
+});
+
+const aboutUsBlock = css(
+  mq({
+    '&:hover':{
+      top: '-20px'
+    },
+    transition: 'all 0.2s ease-in-out',
+    top: '0px',
+    position: 'relative',
+    background: "linear-gradient(225deg, blue, black)",
+    padding: "3px",
+    borderRadius: "10px",
+  })
+);
+
+const aboutUsBlockLeft = css(
+  mq({
+    '&:hover':{
+      top: '-20px'
+    },
+    transition: 'all 0.2s ease-in-out',
+    top: '0px',
+    position: 'relative',
+    background: "linear-gradient(45deg, blue, black)",
+    padding: "3px",
+    borderRadius: "10px",
+  })
+);
+
 const styles = {
   wrapperStyle,
   welcomeContainerStyle,
@@ -92,6 +128,9 @@ const styles = {
   mapsStyle,
   vebinarStyle,
   wrapperVebinarStyle,
+  aboutUsBlock,
+  aboutUsBlockLeft,
+  aboutUsText
 };
 
 export default styles;

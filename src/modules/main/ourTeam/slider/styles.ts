@@ -8,9 +8,15 @@ const slidesContainerStyle = css(
   mq({
     "& .splide__arrow--next": {
       right: ["-60px", "-100px", "-170px"],
+      '& svg':{
+        fill: 'black',
+      }
     },
     "& .splide__arrow--prev": {
       left: ["-60px", "-100px", "-170px"],
+      '& svg':{
+        fill: 'black',
+      }
     },
     display: "flex",
     flexDirection: "row",

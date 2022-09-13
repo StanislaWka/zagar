@@ -24,8 +24,7 @@ const descriptionStyle = css({
 
 const BoxStyle = css(
   mq({
-    marginRight: ["0px", "0px", "100px"],
-    marginBottom: ["60px", "60px", "0px"],
+    marginBottom: ["60px", "60px", "60px"],
   })
 );
 
@@ -40,7 +39,7 @@ const flexCostStyle = css(
 const mainBoxStyles = css(
   mq({
     borderBottom: `1px solid ${colors.cultured}`,
-    marginBottom: "15px",
+    marginBottom: '50px'
   })
 );
 

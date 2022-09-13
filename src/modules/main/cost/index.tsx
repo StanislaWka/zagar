@@ -11,43 +11,46 @@ export function Cost() {
       <Typography variant="h3" sx={{ marginBottom: "40px" }}>
         ЦЕНЫ
       </Typography>
-      <Box css={styles.flexStyle} id="cost">
+      <Box id="cost">
         <Box css={styles.BoxStyle}>
           <Box css={styles.mainBoxStyles}>
             <Box css={styles.flexCostStyle}>
-              <Typography>Br</Typography>
-              <Typography variant="h1">40</Typography>
+              <Typography variant="h1">45</Typography>
+              <Typography>BYN</Typography>
             </Box>
-            <Typography sx={{ fontWeight: "bold" }}>
+            <Typography sx={{ textAlign: "center", fontWeight: "bold" }}>
               МОМЕНТАЛЬНЫЙ ЗАГАР
             </Typography>
           </Box>
           <Typography css={styles.descriptionStyle}>
-            <p>Любой оттенок на все тело</p>
-            <p>Расходные материалы </p>
-            <p>Стикини</p>
+            <p>
+              - Любой оттенок на все тело независимо от роста, веса и
+              особенностей кожи
+            </p>
+            <p>- Стикини, полный набор одноразового белья</p>
+            <p>- Консультация от профессионалов</p>
           </Typography>
-          <CustomButton fullWidth color="info" variant="contained">
+          <CustomButton fullWidth color="primary" variant="contained">
             Записаться
           </CustomButton>
         </Box>
         <Box>
           <Box css={styles.mainBoxStyles}>
-            <Box css={styles.flexCostStyle}>
-              <Typography>Br</Typography>
-              <Typography variant="h1">45</Typography>
+          <Box css={styles.flexCostStyle}>
+              <Typography variant="h1"> 7</Typography>
+              <Typography>BYN</Typography>
             </Box>
             <Typography sx={{ textAlign: "center", fontWeight: "bold" }}>
-              ВСЕ ВКЛЮЧЕНО:
+              ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ:
             </Typography>
           </Box>
           <Typography css={styles.descriptionStyle}>
-            <p>Любой оттенок на все тело </p>
-            <p>Расходные материлы </p>
-            <p>Стикини </p>
-            <p>Жидкий пилинг</p>
+            <p>— Жидкий пилинг</p>
+            <p>— Опудривание на все тело с эффектом мерцания</p>
+            <p>— Капли-усилитель для загара</p>
+            <p>— Жидкий пилинг</p>
           </Typography>
-          <CustomButton color="info" variant="contained" fullWidth>
+          <CustomButton color="primary" variant="contained" fullWidth sx={{marginBottom: '100px'}}>
             Записаться
           </CustomButton>
         </Box>

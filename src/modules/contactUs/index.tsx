@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import React from "react";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 import { Contacts } from "./contacts";
 import styles from "./styles";
@@ -15,6 +15,43 @@ export function ContactUsLayout(props: HomeProps) {
       <Box css={styles.welcomeContainerStyle}>
         <Box css={styles.welcomeTextStyle} className="welcomeText">
           <h2 css={styles.welcomeTextTitleStyle}>О НАС!</h2>
+        </Box>
+      </Box>
+      <Box css={styles.mapsTitleContainerStyle}>
+        <h1>О нас</h1>
+      </Box>
+      <Box
+        sx={{
+          padding: " 0 100px 50px",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <Box css={styles.aboutUsBlock} sx={{ width: "20%" }}>
+          <Typography css={styles.aboutUsText}>
+            Компания ZAGAR была основана в 2013 году,Гулиевой Анастасией и
+            укомплектована отраслевыми экспертами.
+          </Typography>
+        </Box>
+        <Box css={styles.aboutUsBlock} sx={{ width: "20%" }}>
+          <Typography css={styles.aboutUsText}>
+            Мы начали с нуля и построили успешный бизнес эко загара.
+          </Typography>
+        </Box>
+        <Box css={styles.aboutUsBlockLeft} sx={{ width: "20%" }}>
+          <Typography css={styles.aboutUsText}>
+            Мы прошли многочисленные обучения в России, Великобритании, Америке,
+            Австралии.
+          </Typography>
+        </Box>
+        <Box css={styles.aboutUsBlockLeft} sx={{ width: "33%" }}>
+          <Typography css={styles.aboutUsText}>
+            Обучение знаниям и практическим навыкам охватывает науку, лежащую в
+            основе загара без солнца, методы обеспечения естественного загара
+            для каждого клиента, а также инструменты и способы построения
+            успешного бизнеса в сфере автозагара.
+          </Typography>
         </Box>
       </Box>
       <Box css={styles.mapsTitleContainerStyle}>

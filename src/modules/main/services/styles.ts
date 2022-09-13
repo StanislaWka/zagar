@@ -119,6 +119,12 @@ const servicesDescriptionTextContainerStyle = css({
   fontSize: "15px",
 });
 
+const linkStyle = css({
+  textDecoration: 'none!important',
+  lineHeight: '2',
+  color: '#FFF',
+});
+
 const styles = {
   servicesContainerStyle,
   servicesStyle,
@@ -132,6 +138,7 @@ const styles = {
   servicesDescriptionContainerStyle,
   servicesDescriptionTitleContainerStyle,
   servicesDescriptionTextContainerStyle,
+  linkStyle,
 };
 
 export default styles;
