@@ -4,6 +4,7 @@ import {
   BaseLevelArray,
   BaseLevelFeatures,
   BaseLevelPractice,
+  sculptureOfBody,
   SecondLevel,
   ThirdLevel,
 } from "constants/education";
@@ -18,13 +19,18 @@ export function BaseLevel(props: Props) {
     <Box css={styles.greyStyle}>
       <Box sx={{ marginBottom: "50px" }}>
         <Box>
-          <Typography variant="h2" sx={{marginBottom: '25px'}}>Базовая программа( уровень #1)</Typography>
-          <Typography css={styles.afterCourseName} >
+          <Typography variant="h2" sx={{ marginBottom: "25px" }}>
+            Базовая программа( уровень #1)
+          </Typography>
+          <Typography css={styles.afterCourseName}>
             Предназначена для начинающих мастеров по автозагару.
           </Typography>
         </Box>
         <Box>
-          <Typography sx={{ marginBottom: "50px" }} css={styles.afterCourseName}>
+          <Typography
+            sx={{ marginBottom: "50px" }}
+            css={styles.afterCourseName}
+          >
             На индивидуальном занятии основной программы вы изучите основы
           </Typography>
           <Grid container spacing={8}>
@@ -36,8 +42,10 @@ export function BaseLevel(props: Props) {
           </Grid>
         </Box>
       </Box>
-      <Box  sx={{ marginBottom: "50px" }}>
-        <Typography css={styles.afterCourseName} sx={{ marginBottom: "50px" }}>Техника загара (практика):</Typography>
+      <Box sx={{ marginBottom: "50px" }}>
+        <Typography css={styles.afterCourseName} sx={{ marginBottom: "50px" }}>
+          Техника загара (практика):
+        </Typography>
         <Grid container spacing={8}>
           {BaseLevelPractice.map((value) => (
             <Grid item xs={4}>
@@ -46,8 +54,10 @@ export function BaseLevel(props: Props) {
           ))}
         </Grid>
       </Box>
-      <Box  sx={{ marginBottom: "50px" }}>
-      <Typography css={styles.afterCourseName} sx={{ marginBottom: "50px" }}>Бонусы</Typography>
+      <Box sx={{ marginBottom: "50px" }}>
+        <Typography css={styles.afterCourseName} sx={{ marginBottom: "50px" }}>
+          Бонусы
+        </Typography>
         <Grid container spacing={8}>
           {BaseLevelFeatures.map((value) => (
             <Grid item xs={4}>
@@ -56,9 +66,11 @@ export function BaseLevel(props: Props) {
           ))}
         </Grid>
       </Box>
-      <Box  sx={{ marginBottom: "50px" }}>
-        <Box  sx={{ marginBottom: "50px" }}>
-          <Typography  sx={{ marginBottom: "50px" }} variant="h2">Уровень#2</Typography>
+      <Box sx={{ marginBottom: "50px" }}>
+        <Box sx={{ marginBottom: "50px" }}>
+          <Typography sx={{ marginBottom: "50px" }} variant="h2">
+            Уровень#2
+          </Typography>
           <Typography css={styles.afterCourseName}>
             Идеально подходит для тех, кто уже обучен нанесению спрей-загара, но
             ищет дополнительные советы и знания о том, как расширить свою
@@ -67,7 +79,7 @@ export function BaseLevel(props: Props) {
             блог и т.д
           </Typography>
         </Box>
-        <Box  sx={{ marginBottom: "50px" }}>
+        <Box sx={{ marginBottom: "50px" }}>
           <Typography css={styles.afterCourseName}>
             Курс проводит: основатель бизнес процессов Гулиева Анастасия,жюри
             чемпионатов по безопасному загару,эксперт с опытом работы 9
@@ -77,13 +89,15 @@ export function BaseLevel(props: Props) {
             в России,Великобритании,Австралии,США.
           </Typography>
         </Box>
-        <Box  sx={{ marginBottom: "50px" }}>
-          <Typography css={styles.afterCourseName}>Предварительное условие для этого курса:</Typography>
+        <Box sx={{ marginBottom: "50px" }}>
+          <Typography css={styles.afterCourseName}>
+            Предварительное условие для этого курса:
+          </Typography>
           <Typography css={styles.afterCourseName}>
             Вы завершили курс обучения по моментальному загару 1-го уровня.
           </Typography>
         </Box>
-        <Box  sx={{ marginBottom: "50px" }}>
+        <Box sx={{ marginBottom: "50px" }}>
           <Grid container spacing={8}>
             {SecondLevel.map((value) => (
               <Grid item xs={4}>
@@ -96,9 +110,9 @@ export function BaseLevel(props: Props) {
           Обучение продлится 2 часа живая встреча в онлайн формате .
         </Typography>
       </Box>
-      <Box  sx={{ marginBottom: "50px" }}>
+      <Box sx={{ marginBottom: "50px" }}>
         <Box>
-          <Box  sx={{ marginBottom: "50px" }}>
+          <Box sx={{ marginBottom: "50px" }}>
             <Typography sx={{ marginBottom: "25px" }} variant="h2">
               Уровень #3 Повышение квалификации
             </Typography>
@@ -108,9 +122,56 @@ export function BaseLevel(props: Props) {
             </Typography>
           </Box>
           <Box>
-            <Typography  sx={{ marginBottom: "50px" }} css={styles.afterCourseName}>Содержание курса.</Typography>
+            <Typography
+              sx={{ marginBottom: "50px" }}
+              css={styles.afterCourseName}
+            >
+              Содержание курса.
+            </Typography>
             <Grid container spacing={8}>
               {ThirdLevel.map((value) => (
+                <Grid item xs={4}>
+                  <GridItem text={value} />
+                </Grid>
+              ))}
+            </Grid>
+          </Box>
+        </Box>
+      </Box>
+      <Box sx={{ marginBottom: "50px" }}>
+        <Box>
+          <Box sx={{ marginBottom: "50px" }}>
+            <Typography sx={{ marginBottom: "25px" }} variant="h2">
+              Скульптурирование тела
+            </Typography>
+            <Typography css={styles.afterCourseName}>
+              Не упустите возможность завоевать рынок в своем регионе и
+              завоевать неугасающую лояльность ваших клиентов, предлагая что-то
+              НЕЗАБЫВАЕМОЕ! Станьте частью этой программы вместе со мной и
+              сделайте шаг вперед в своей карьере НАВСЕГДА.
+            </Typography>
+            <Typography css={styles.afterCourseName}>
+              Курс длится 3 часа.
+            </Typography>
+            <Typography css={styles.afterCourseName}>
+              На отработке 3 модели
+            </Typography>
+            <Typography css={styles.afterCourseName}>
+              Курс проводит: Екатерина Скачкова,Гулиева Анастасия
+            </Typography>
+            <Typography css={styles.afterCourseName}>
+              Доступен формат онлайн и офлайн.
+            </Typography>
+          </Box>
+          <Box>
+            <Typography
+              sx={{ marginBottom: "50px" }}
+              css={styles.afterCourseName}
+            >
+              Содержание курса.
+            </Typography>
+            <Grid container spacing={8}>
+              {sculptureOfBody.map((value) => (
                 <Grid item xs={4}>
                   <GridItem text={value} />
                 </Grid>

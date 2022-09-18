@@ -1,11 +1,84 @@
 /** @jsxImportSource @emotion/react */
-import { Box, Typography } from "@mui/material";
-import { CustomButton } from "components";
+import {
+  Box,
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  SelectChangeEvent,
+  Theme,
+  Typography,
+  useTheme,
+} from "@mui/material";
+import { CustomButton, CustomPhoneInput, Input } from "components";
 import React from "react";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { validationSchema } from "validators/zagarNaDom";
 
 import styles from "./styles";
 
+function getStyles(name: string, personName: string[], theme: Theme) {
+  return {
+    fontWeight:
+      personName.indexOf(name) === -1
+        ? theme.typography.fontWeightRegular
+        : theme.typography.fontWeightMedium,
+  };
+}
+
+enum VALUE {
+  PILLING = "Жидкий пилинг",
+  CAPLES = "Капли-усилители для загара",
+  PUDRA = "Опудривание с эффектом мерцания",
+  NOTHING = "Без дополнительных услуг",
+}
+
+const VALUES = [
+  "Жидкий пилинг",
+  "Капли-усилители для загара",
+  "Опудривание с эффектом мерцания",
+  "Без дополнительных услуг",
+];
+
 export function Cost() {
+  const theme = useTheme();
+  const [recipient, setRecipient] = React.useState<string[]>([
+    VALUES[VALUES.length - 1],
+  ]);
+
+  const handleChange = (event: SelectChangeEvent<typeof recipient>) => {
+    const {
+      target: { value },
+    } = event;
+    const chosenRecipients =
+      typeof value === "string" ? value.split(",") : value;
+    if (
+      [VALUE.PILLING, VALUE.CAPLES, VALUE.PUDRA].some((value) =>
+        chosenRecipients.includes(value)
+      )
+    ) {
+      const newArr = chosenRecipients.filter(
+        (value) => value !== VALUE.NOTHING
+      );
+      setRecipient(newArr);
+    } else {
+      setRecipient(chosenRecipients);
+    }
+  };
+  const formOptions = {
+    defaultValues: {
+      name: "",
+      address: "",
+      phoneNumber: "",
+      extraRequirements: "",
+    },
+    resolver: yupResolver(validationSchema),
+  };
+
+  const { register, control, handleSubmit, formState } = useForm(formOptions);
+  const { errors, dirtyFields } = formState;
+
   return (
     <>
       <Typography variant="h3" sx={{ marginBottom: "40px" }}>
@@ -36,7 +109,7 @@ export function Cost() {
         </Box>
         <Box>
           <Box css={styles.mainBoxStyles}>
-          <Box css={styles.flexCostStyle}>
+            <Box css={styles.flexCostStyle}>
               <Typography variant="h1"> 7</Typography>
               <Typography>BYN</Typography>
             </Box>
@@ -50,9 +123,98 @@ export function Cost() {
             <p>— Капли-усилитель для загара</p>
             <p>— Жидкий пилинг</p>
           </Typography>
-          <CustomButton color="primary" variant="contained" fullWidth sx={{marginBottom: '100px'}}>
+          <CustomButton
+            color="primary"
+            variant="contained"
+            fullWidth
+            sx={{ marginBottom: "100px" }}
+          >
             Записаться
           </CustomButton>
+        </Box>
+        <Box>
+          <Box css={styles.mainBoxStyles}>
+            <Box sx={{ display: "flex", justifyContent: "space-around" }}>
+              <Box>
+                <Box css={styles.flexCostStyle}>
+                  <Typography variant="h1"> 20</Typography>
+                  <Typography>BYN</Typography>
+                </Box>
+                <Typography sx={{ textAlign: "center", fontWeight: "bold" }}>
+                  ОПЛАТА ЗА ВЫЕЗД:
+                </Typography>
+              </Box>
+              <Box>
+                <Box css={styles.flexCostStyle}>
+                  <Typography variant="h1"> 45</Typography>
+                  <Typography>BYN</Typography>
+                </Box>
+                <Typography sx={{ textAlign: "center", fontWeight: "bold" }}>
+                  ОПЛАТА ЗА ЗАГАР:
+                </Typography>
+              </Box>
+            </Box>
+          </Box>
+          <form>
+            <Input
+              required
+              label="Имя"
+              name="name"
+              placeholder="Введите имя"
+              variant="outlined"
+              register={register}
+            />
+
+            <Input
+              required
+              label="Адрес"
+              name="address"
+              placeholder="Введите адрес"
+              variant="outlined"
+              register={register}
+            />
+            <CustomPhoneInput
+              height={40}
+              placeholder="Number"
+              name="phoneNumber"
+              control={control}
+              dataTestId="contact_phone-number"
+            />
+            <Box sx={{ width: "100%", padding: "1rem", marginBottom: '20px' }}>
+              <FormControl fullWidth>
+                <InputLabel id="demo-simple-select-label">
+                  ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ
+                </InputLabel>
+                <Select
+                  labelId="demo-simple-select-label"
+                  id="demo-simple-select"
+                  label="ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ"
+                  name="recipient"
+                  multiple
+                  value={recipient}
+                  onChange={handleChange}
+                >
+                  {VALUES.map((value, index) => (
+                    <MenuItem
+                      key={value}
+                      value={value}
+                      style={getStyles(value, recipient, theme)}
+                    >
+                      {value}
+                    </MenuItem>
+                  ))}
+                </Select>
+              </FormControl>
+            </Box>
+            <CustomButton
+              color="primary"
+              variant="contained"
+              fullWidth
+              sx={{ marginBottom: "100px" }}
+            >
+              Отправить
+            </CustomButton>
+          </form>
         </Box>
       </Box>
     </>

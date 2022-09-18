@@ -8,7 +8,7 @@ import example7 from "assets/exmp7.png";
 import example8 from "assets/exmp8.png";
 
 import styles from "./styles";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { APP_ROUTES } from "constants/appRoutes";
 
 export const mainData = {
@@ -174,8 +174,9 @@ export const mainData = {
     },
     {
       id: 4,
-      title: "Часто Задаваемые Вопросы",
+      title: "Наши товары",
       description: "Text text text text",
+      link: "https://www.ozon.ru/brand/zagar-87344674/",
     },
   ],
 };
@@ -202,12 +203,12 @@ export function Services() {
                   <h3 css={styles.serviceTitleTextStyle}>{s.title}</h3>
                 </Box>
               </Box>
-              <Link
+              <a
                 key={s.link}
-                to={{
-                  pathname: s.link,
-                }}
+                target="_blank"
+                href={s.link}
                 css={styles.linkStyle}
+                rel="noreferrer"
               >
                 <Box
                   css={styles.serviceTextContainerStyle}
@@ -215,7 +216,7 @@ export function Services() {
                 >
                   <p>{s.description}</p>
                 </Box>
-              </Link>
+              </a>
             </Box>
           );
         })}
