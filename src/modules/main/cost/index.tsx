@@ -76,8 +76,8 @@ export function Cost() {
     resolver: yupResolver(validationSchema),
   };
 
-  const { register, control, handleSubmit, formState } = useForm(formOptions);
-  const { errors, dirtyFields } = formState;
+  const { register, control } = useForm(formOptions);
+  // const { errors, dirtyFields } = formState;
 
   return (
     <>
@@ -177,6 +177,7 @@ export function Cost() {
               height={40}
               placeholder="Number"
               name="phoneNumber"
+              // @ts-ignore
               control={control}
               dataTestId="contact_phone-number"
             />

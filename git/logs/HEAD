@@ -1,0 +1,11 @@
+0000000000000000000000000000000000000000 523e07ddb0f0cc853fdff860ef59211dcfd58471 StanislaWka <stas-babitsky@mail.ru> 1657654878 +0300	commit (initial): Initialize project using Create React App
+523e07ddb0f0cc853fdff860ef59211dcfd58471 6a42b923d1afa2821627c0fe5cf00e99778df532 StanislaWka <stas-babitsky@mail.ru> 1658223533 +0300	commit: feat: add basic pages
+6a42b923d1afa2821627c0fe5cf00e99778df532 ca628a17b5ce01dc9c71ef02b67d8f1de692ea9a StanislaWka <stas-babitsky@mail.ru> 1658223550 +0300	commit (amend): feat: add basic pages
+ca628a17b5ce01dc9c71ef02b67d8f1de692ea9a c63021ffbd1a9f300cbd550889795a988ad03f6d StanislaWka <stas-babitsky@mail.ru> 1658224399 +0300	commit: fix: footer color
+c63021ffbd1a9f300cbd550889795a988ad03f6d 857c4ed6a53249d7692ed52161f4fd0bd1905f0a StanislaWka <stas-babitsky@mail.ru> 1658226690 +0300	commit: fix: delete links
+857c4ed6a53249d7692ed52161f4fd0bd1905f0a bacff5072fc4c5647ef1487326f4aecd3ce9df79 StanislaWka <stas-babitsky@mail.ru> 1658226904 +0300	commit: feat: add redirect for netlify
+bacff5072fc4c5647ef1487326f4aecd3ce9df79 afdd2e79b16e6997ef6205db40089c0c344cc863 StanislaWka <stas-babitsky@mail.ru> 1658234109 +0300	commit: feat: add record Button
+afdd2e79b16e6997ef6205db40089c0c344cc863 70ac2995dd815a14335d9b3fcf453b670a6d3a3f StanislaWka <stas-babitsky@mail.ru> 1658237076 +0300	commit: feat: link to phone number
+70ac2995dd815a14335d9b3fcf453b670a6d3a3f 19a6fd2ff3cdd8705b82ab779251608bbccbf95b StanislaWka <stas-babitsky@mail.ru> 1659371343 +0300	commit: feat: bug fixed & vebinar add
+19a6fd2ff3cdd8705b82ab779251608bbccbf95b f6dfc63ad072278f1bfd0d05a83e5382929ebddc StanislaWka <stas-babitsky@mail.ru> 1663086395 +0300	commit: feat: start to add education
+f6dfc63ad072278f1bfd0d05a83e5382929ebddc 89201d32482474b2ab823b6edef46f52097d4de4 StanislaWka <stas-babitsky@mail.ru> 1663538132 +0300	commit: feat: add one more course
