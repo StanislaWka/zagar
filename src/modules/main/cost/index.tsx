@@ -81,7 +81,6 @@ export function Cost() {
   const { handleSubmit, register, control } = useForm(formOptions);
 
   const onSubmit = (formData: any) => {
-    console.info(formData);
     const data = {
       name: formData.name,
       address: formData.address,
