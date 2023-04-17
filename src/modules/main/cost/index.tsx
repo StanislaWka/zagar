@@ -85,7 +85,7 @@ export function Cost() {
       name: formData.name,
       address: formData.address,
       phoneNumber: formData.phoneNumber,
-      extraRequirements: formData.extraRequirements,
+      extraRequirements: recipient.join(', '),
     };
 
     sendMessage(data);
