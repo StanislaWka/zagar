@@ -15,6 +15,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { validationSchema } from "validators/zagarNaDom";
+import { sendMessage } from "helpers/telegramApi";
 
 import styles from "./styles";
 
@@ -66,6 +67,7 @@ export function Cost() {
       setRecipient(chosenRecipients);
     }
   };
+
   const formOptions = {
     defaultValues: {
       name: "",
@@ -76,8 +78,19 @@ export function Cost() {
     resolver: yupResolver(validationSchema),
   };
 
-  const { register, control } = useForm(formOptions);
-  // const { errors, dirtyFields } = formState;
+  const { handleSubmit, register, control } = useForm(formOptions);
+
+  const onSubmit = (formData: any) => {
+    console.info(formData);
+    const data = {
+      name: formData.name,
+      address: formData.address,
+      phoneNumber: formData.phoneNumber,
+      extraRequirements: formData.extraRequirements,
+    };
+
+    sendMessage(data);
+  };
 
   return (
     <>
@@ -155,7 +168,7 @@ export function Cost() {
               </Box>
             </Box>
           </Box>
-          <form>
+          <form onSubmit={handleSubmit(onSubmit)}>
             <Input
               required
               label="Имя"
@@ -181,7 +194,7 @@ export function Cost() {
               control={control}
               dataTestId="contact_phone-number"
             />
-            <Box sx={{ width: "100%", padding: "1rem", marginBottom: '20px' }}>
+            <Box sx={{ width: "100%", padding: "1rem", marginBottom: "20px" }}>
               <FormControl fullWidth>
                 <InputLabel id="demo-simple-select-label">
                   ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ
@@ -208,6 +221,7 @@ export function Cost() {
               </FormControl>
             </Box>
             <CustomButton
+              type="submit"
               color="primary"
               variant="contained"
               fullWidth

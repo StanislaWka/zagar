@@ -17,21 +17,60 @@ export function ContactUsLayout(props: HomeProps) {
           <h2 css={styles.welcomeTextTitleStyle}>О НАС!</h2>
         </Box>
       </Box>
-      <Box css={styles.mapsTitleContainerStyle}>
-        <h1>О нас</h1>
-      </Box>
       <Box
         sx={{
           padding: " 0 100px 50px",
           display: "flex",
-          justifyContent: "space-between",
+          justifyContent: "space-around",
           alignItems: "center",
         }}
       >
-        <Box css={styles.aboutUsBlock} sx={{ width: "20%" }}>
+        <Box css={styles.mapsTitleContainerStyle}>
+          <Typography
+            sx={{ fontSize: "40px", fontWeight: 600, width: "400px" }}
+          >
+            ПОЧЕМУ ВЫБИРАЮТ СТУДИЮ ZAGAR
+          </Typography>
+        </Box>
+        <Box>
+          <Box sx={{ display: "flex" }}>
+            <Box padding={5}>
+              <h1>2013</h1>
+              <Typography>
+                Компания ZAGAR была основана в году 2013 и укомплектована
+                отраслевыми экспертами.
+              </Typography>
+            </Box>
+            <Box padding={5}>
+              <h1>0</h1>
+              <Typography>
+                Мы начали с нуля и построили успешный бизнес эко загара.{" "}
+              </Typography>
+            </Box>
+          </Box>
+          <Box sx={{ display: "flex" }}>
+            <Box padding={5}>
+              <h1>Обучение</h1>
+              <Typography>
+                Мы прошли многочисленные обучения в России, Великобритании,
+                Америке, Австралии.
+              </Typography>
+            </Box>
+            <Box padding={5}>
+              <h1>Подход</h1>
+              <Typography>
+                Обучение знаниям и практическим навыкам охватывает науку,
+                лежащую в основе загара без солнца, методы обеспечения
+                естественного загара для каждого клиента, а также инструменты и
+                способы построения успешного бизнеса в сфере автозагара.
+              </Typography>
+            </Box>
+          </Box>
+        </Box>
+
+        {/* <Box css={styles.aboutUsBlock} sx={{ width: "20%" }}>
           <Typography css={styles.aboutUsText}>
-            Компания ZAGAR была основана в 2013 году,Гулиевой Анастасией и
-            укомплектована отраслевыми экспертами.
+           
           </Typography>
         </Box>
         <Box css={styles.aboutUsBlock} sx={{ width: "20%" }}>
@@ -52,7 +91,7 @@ export function ContactUsLayout(props: HomeProps) {
             для каждого клиента, а также инструменты и способы построения
             успешного бизнеса в сфере автозагара.
           </Typography>
-        </Box>
+        </Box> */}
       </Box>
       <Box css={styles.mapsTitleContainerStyle}>
         <h1>ЗАПИСАТЬСЯ НА БЕСПЛАТНЫЙ ВЕБИНАР</h1>
