@@ -100,7 +100,7 @@ export function Cost() {
         <Box css={styles.BoxStyle}>
           <Box css={styles.mainBoxStyles}>
             <Box css={styles.flexCostStyle}>
-              <Typography variant="h1">45</Typography>
+              <Typography variant="h1">49</Typography>
               <Typography>BYN</Typography>
             </Box>
             <Typography sx={{ textAlign: "center", fontWeight: "bold" }}>
@@ -122,7 +122,7 @@ export function Cost() {
         <Box>
           <Box css={styles.mainBoxStyles}>
             <Box css={styles.flexCostStyle}>
-              <Typography variant="h1"> 7</Typography>
+              <Typography variant="h1"> 10</Typography>
               <Typography>BYN</Typography>
             </Box>
             <Typography sx={{ textAlign: "center", fontWeight: "bold" }}>
@@ -158,7 +158,7 @@ export function Cost() {
               </Box>
               <Box>
                 <Box css={styles.flexCostStyle}>
-                  <Typography variant="h1"> 45</Typography>
+                  <Typography variant="h1"> 49</Typography>
                   <Typography>BYN</Typography>
                 </Box>
                 <Typography sx={{ textAlign: "center", fontWeight: "bold" }}>

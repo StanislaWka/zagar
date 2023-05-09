@@ -3,7 +3,7 @@ import React from "react";
 import { Box } from "@mui/material";
 
 import { FooterQuestions } from "./footerQuestions";
-import { OurTeam } from "./ourTeam";
+import { OurTeam } from "./modelsZagar";
 import { Services } from "./services";
 import styles from "./styles";
 import { Cost } from "./cost";

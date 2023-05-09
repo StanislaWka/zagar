@@ -61,6 +61,7 @@ const imgBoxStyles = css(
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    width: "100%",
     maxHeight: "52px",
     maxWidth: "130px",
     "&:hover": {

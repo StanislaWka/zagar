@@ -99,7 +99,7 @@ const servicesDescriptionContainerStyle = css({
   padding: "20px",
   display: "flex",
   flexDirection: "column",
-  width: "270px",
+  width: "380px",
 });
 
 const servicesDescriptionTitleContainerStyle = css({

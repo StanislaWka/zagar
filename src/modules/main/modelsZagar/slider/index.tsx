@@ -13,10 +13,6 @@ export function Slider() {
     return (
       <Slide
         key={u.id}
-        name={u.name}
-        surname={u.surname}
-        job={u.job}
-        comment={u.comment}
         avatar={u.avatar}
       />
     );

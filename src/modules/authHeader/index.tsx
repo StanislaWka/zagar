@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { AppBar, Box, Toolbar, Typography } from "@mui/material";
 
-import darkLogo from "assets/dark_logo.png";
+import DarkLogo from "assets/dark_logo.png";
 import { APP_ROUTES } from "constants/appRoutes";
 import styles from "./styles";
 import { StyledBurgerMenu } from "./burgerMenu";
@@ -25,15 +25,18 @@ export function AuthHeader(props: AuthHeaderProps) {
             <Box
               css={styles.imgBoxStyles}
               component="img"
-              src={darkLogo}
-              alt="Sunmait logo"
+              src={DarkLogo}
+              alt="Zagar logo"
             />
           </Link>
           <Box component="div" css={styles.navigationBox}>
             <ButtonsMenu />
           </Box>
           <RecordButton />
-          <Typography css={styles.addressStyle} sx={{ width: "100%", textAlign: "right" }}>
+          <Typography
+            css={styles.addressStyle}
+            sx={{ width: "100%", textAlign: "right" }}
+          >
             ул. Притыцкого 34 1 подъезд 1 этаж ст.м. Пушкинская
           </Typography>
         </Box>

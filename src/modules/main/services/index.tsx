@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import React from "react";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import example5 from "assets/zagar.png";
 import exmaple4 from "assets/exmp4.png";
 import example6 from "assets/exmp6.png";
@@ -15,42 +15,22 @@ export const mainData = {
   usersComments: [
     {
       id: 1,
-      name: "Name",
-      surname: "Surname",
-      job: "Job",
-      comment: "Some text awdwadwdawd awdawdadad awdwadawd awdawdawd lorem",
       avatar: example5,
     },
     {
       id: 2,
-      name: "Name",
-      surname: "Surname",
-      job: "Job",
-      comment: "Some text awdwadwdawd awdawdadad awdwadawd awdawdawd lorem",
       avatar: example8,
     },
     {
       id: 3,
-      name: "Name",
-      surname: "Surname",
-      job: "Job",
-      comment: "Some text awdwadwdawd awdawdadad awdwadawd awdawdawd lorem",
       avatar: exmaple4,
     },
     {
       id: 4,
-      name: "Name",
-      surname: "Surname",
-      job: "Job",
-      comment: "Some text awdwadwdawd awdawdadad awdwadawd awdawdawd lorem",
       avatar: example6,
     },
     {
       id: 5,
-      name: "Name",
-      surname: "Surname",
-      job: "Job",
-      comment: "Some text awdwadwdawd awdawdadad awdwadawd awdawdawd lorem",
       avatar: example7,
     },
   ],
@@ -162,20 +142,17 @@ export const mainData = {
     {
       id: 1,
       title: "О нас",
-      description: "Text text text text",
       link: APP_ROUTES.CONTACT,
     },
-    { id: 2, title: "Цены", description: "Text text text text", link: "" },
+    { id: 2, title: "Цены", link: "" },
     {
       id: 3,
       title: "Обучение",
-      description: "Text text text text",
-      link: APP_ROUTES.EDUCATION,
+      // link: APP_ROUTES.EDUCATION,
     },
     {
       id: 4,
       title: "Наши товары",
-      description: "Text text text text",
       link: "https://www.ozon.ru/brand/zagar-87344674/",
     },
   ],
@@ -223,13 +200,16 @@ export function Services() {
       </Box>
       <Box css={styles.servicesDescriptionContainerStyle}>
         <Box css={styles.servicesDescriptionTitleContainerStyle}>
-          <h3>Title Text</h3>
+          <h3>Наши преимущества</h3>
         </Box>
         <Box css={styles.servicesDescriptionTextContainerStyle}>
-          <p>
-            text text text text text text text text text text text text text
-            text text text
-          </p>
+          <Typography>
+            Мы используем колористику для создания уникального оттенка загара.
+            Лосьон используем премиум
+            класса. Производство: Великобритания. Вариант для получения темного и в
+            тоже время натурального оттенка загара в соответствии с тенденциями
+            2023 года.
+          </Typography>
         </Box>
       </Box>
     </Box>

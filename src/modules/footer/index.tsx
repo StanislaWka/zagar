@@ -35,7 +35,7 @@ function CopyrightLogo() {
         variant="caption"
       >
         {`${new Date().getFullYear()} `}
-        <Link color="neutral.main" target="_blank" href="https://sunmait.com">
+        <Link color="neutral.main" target="_blank" href="#">
           СТУДИЯ МОМЕНТАЛЬНОГО ЗАГАРА
         </Link>{" "}
       </Typography>
@@ -54,7 +54,7 @@ export function Footer() {
   return (
     <Box bgcolor="black" css={styles.footerStyles} component="footer">
       <CopyrightLogo />
-      <Container maxWidth="sm" css={styles.containerStyle}>
+      {/* <Container maxWidth="sm" css={styles.containerStyle}>
         <Box css={styles.contactsInfoWrapperStyles}>
           <Box>
             <Typography
@@ -101,8 +101,8 @@ export function Footer() {
               </Box>
             </Box>
           </Box>
-        </Box>
-      </Container>
+        </Box> */}
+      {/* </Container> */}
       <Box css={styles.contactUsButtonContainerStyles}>
         <ContactUsButton onClick={handleContactUs} />
       </Box>

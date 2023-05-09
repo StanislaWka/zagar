@@ -17,14 +17,7 @@ export function ContactUsLayout(props: HomeProps) {
           <h2 css={styles.welcomeTextTitleStyle}>О НАС!</h2>
         </Box>
       </Box>
-      <Box
-        sx={{
-          padding: " 0 100px 50px",
-          display: "flex",
-          justifyContent: "space-around",
-          alignItems: "center",
-        }}
-      >
+      <Box css={styles.wrapperDescrStyles}>
         <Box css={styles.mapsTitleContainerStyle}>
           <Typography
             sx={{ fontSize: "40px", fontWeight: 600, width: "400px" }}
@@ -93,7 +86,7 @@ export function ContactUsLayout(props: HomeProps) {
           </Typography>
         </Box> */}
       </Box>
-      <Box css={styles.mapsTitleContainerStyle}>
+      {/* <Box css={styles.mapsTitleContainerStyle}>
         <h1>ЗАПИСАТЬСЯ НА БЕСПЛАТНЫЙ ВЕБИНАР</h1>
       </Box>
       <Box css={styles.wrapperVebinarStyle}>
@@ -107,10 +100,12 @@ export function ContactUsLayout(props: HomeProps) {
           <RecordButton />
         </Box>
       </Box>
-      <Contacts />
+      <Contacts /> */}
       <Box css={styles.mapsContainerStyle}>
         <Box css={styles.mapsTitleContainerStyle}>
-          <h2>Где мы находимся?</h2>
+          <Typography variant="h3" fontWeight={500}>
+            ГДЕ МЫ НАХОДИМСЯ?
+          </Typography>
         </Box>
         <Box width="85vw" height="40vh">
           <iframe

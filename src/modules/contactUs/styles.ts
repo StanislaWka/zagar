@@ -5,13 +5,15 @@ import { breakpoints } from "components/rootStyles/styles";
 
 const mq = facepaint(breakpoints.map((bp) => `@media (min-width: ${bp}px)`));
 
-const wrapperStyle = css({
-  padding: "20px",
-  display: "flex",
-  alignItems: "center",
-  flexDirection: "column",
-  width: "100%",
-});
+const wrapperStyle = mq(
+  css({
+    padding: "20px",
+    display: "flex",
+    alignItems: "center",
+    flexDirection: "column",
+    width: "100%",
+  })
+);
 
 const welcomeContainerStyle = css({
   "&: hover": {
@@ -86,18 +88,18 @@ const aboutUsText = css({
   background: "white",
   margin: "1px",
   padding: "10px",
-  fontWeight: '200',
-  fontSize: '19px',
+  fontWeight: "200",
+  fontSize: "19px",
 });
 
 const aboutUsBlock = css(
   mq({
-    '&:hover':{
-      top: '-20px'
+    "&:hover": {
+      top: "-20px",
     },
-    transition: 'all 0.2s ease-in-out',
-    top: '0px',
-    position: 'relative',
+    transition: "all 0.2s ease-in-out",
+    top: "0px",
+    position: "relative",
     background: "linear-gradient(225deg, blue, black)",
     padding: "3px",
     borderRadius: "10px",
@@ -106,15 +108,25 @@ const aboutUsBlock = css(
 
 const aboutUsBlockLeft = css(
   mq({
-    '&:hover':{
-      top: '-20px'
+    "&:hover": {
+      top: "-20px",
     },
-    transition: 'all 0.2s ease-in-out',
-    top: '0px',
-    position: 'relative',
+    transition: "all 0.2s ease-in-out",
+    top: "0px",
+    position: "relative",
     background: "linear-gradient(45deg, blue, black)",
     padding: "3px",
     borderRadius: "10px",
+  })
+);
+
+const wrapperDescrStyles = css(
+  mq({
+    padding: " 0 100px 50px",
+    display: "flex",
+    justifyContent: "space-around",
+    alignItems: "center",
+    flexDirection: ["column", 'column', "row"],
   })
 );
 
@@ -130,7 +142,8 @@ const styles = {
   wrapperVebinarStyle,
   aboutUsBlock,
   aboutUsBlockLeft,
-  aboutUsText
+  aboutUsText,
+  wrapperDescrStyles
 };
 
 export default styles;
