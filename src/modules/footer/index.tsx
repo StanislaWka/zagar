@@ -1,8 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import React from "react";
-import { Link as RouterLink } from "react-router-dom";
-import { Box, Container, IconButton, Link, Typography } from "@mui/material";
-import { Facebook, LinkedIn, Twitter } from "@mui/icons-material";
+// import { Link as RouterLink } from "react-router-dom";
+import { Box,Link, Typography } from "@mui/material";
+// import { Facebook, LinkedIn, Twitter } from "@mui/icons-material";
 
 import Logo from "assets/logo.png";
 import { APP_ROUTES } from "constants/appRoutes";
@@ -44,8 +44,8 @@ function CopyrightLogo() {
 }
 
 export function Footer() {
-  const handleScrollTop = (e: React.MouseEvent) =>
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  // const handleScrollTop = (e: React.MouseEvent) =>
+  //   window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
   const handleContactUs = () => {
     window.scrollTo(0, document.body.scrollHeight);

@@ -2,10 +2,10 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 
-import { Contacts } from "./contacts";
+// import { Contacts } from "./contacts";
 import styles from "./styles";
-import vebinar from "../../assets/vebinar.png";
-import { RecordButton } from "components/recordButton";
+// import vebinar from "../../assets/vebinar.png";
+// import { RecordButton } from "components/recordButton";
 
 interface HomeProps {}
 
