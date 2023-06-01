@@ -1,13 +1,11 @@
 /** @jsxImportSource @emotion/react */
 import React from "react";
-import { Link as RouterLink } from "react-router-dom";
 import { Box, Container, IconButton, Link, Typography } from "@mui/material";
-import { Instagram, Telegram, Twitter } from "@mui/icons-material";
+import { Instagram, Telegram } from "@mui/icons-material";
 
 import Logo from "assets/logo.png";
 import { APP_ROUTES } from "constants/appRoutes";
 import { useEnhancedNavigate } from "hooks";
-import { ContactUs as ContactUsButton } from "./contactUsButton";
 import styles from "./styles";
 
 function CopyrightLogo() {
@@ -44,13 +42,6 @@ function CopyrightLogo() {
 }
 
 export function Footer() {
-  const handleScrollTop = (e: React.MouseEvent) =>
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-
-  const handleContactUs = () => {
-    window.scrollTo(0, document.body.scrollHeight);
-  };
-
   return (
     <Box bgcolor="black" css={styles.footerStyles} component="footer">
       <CopyrightLogo />
