@@ -108,6 +108,7 @@ export function ContactUsLayout(props: HomeProps) {
           </Typography>
         </Box>
         <Box width="85vw" height="40vh">
+          {/* eslint-disable-next-line jsx-a11y/iframe-has-title */}
           <iframe
             src="https://www.google.com/maps/d/embed?mid=1mo2QgEiayBbvH7XvrdUS2Fvlec0fo5M&ehbc=2E312F"
             width="100%"
