@@ -44,6 +44,14 @@ const VALUES = [
 
 export function Cost() {
   const theme = useTheme();
+
+  const scrollToForm = () => {
+    const element = document.getElementById('form');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const [recipient, setRecipient] = React.useState<string[]>([
     VALUES[VALUES.length - 1],
   ]);
@@ -115,7 +123,7 @@ export function Cost() {
             <p>- Стикини, полный набор одноразового белья</p>
             <p>- Консультация от профессионалов</p>
           </Typography>
-          <CustomButton fullWidth color="primary" variant="contained">
+          <CustomButton fullWidth color="primary" variant="contained" onClick={scrollToForm}>
             Записаться
           </CustomButton>
         </Box>
@@ -140,11 +148,12 @@ export function Cost() {
             variant="contained"
             fullWidth
             sx={{ marginBottom: "100px" }}
+            onClick={scrollToForm}
           >
             Записаться
           </CustomButton>
         </Box>
-        <Box>
+        <Box id='form'>
           <Box css={styles.mainBoxStyles}>
             <Box sx={{ display: "flex", justifyContent: "space-around" }}>
               <Box>
@@ -194,7 +203,7 @@ export function Cost() {
               dataTestId="contact_phone-number"
             />
             <Box sx={{ width: "100%", padding: "1rem", marginBottom: "20px" }}>
-              <FormControl fullWidth>
+              <FormControl fullWidth >
                 <InputLabel id="demo-simple-select-label">
                   ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ
                 </InputLabel>

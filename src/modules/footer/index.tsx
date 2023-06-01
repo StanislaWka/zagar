@@ -1,8 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import React from "react";
-// import { Link as RouterLink } from "react-router-dom";
-import { Box,Link, Typography } from "@mui/material";
-// import { Facebook, LinkedIn, Twitter } from "@mui/icons-material";
+import { Link as RouterLink } from "react-router-dom";
+import { Box, Container, IconButton, Link, Typography } from "@mui/material";
+import { Instagram, Telegram, Twitter } from "@mui/icons-material";
 
 import Logo from "assets/logo.png";
 import { APP_ROUTES } from "constants/appRoutes";
@@ -44,8 +44,8 @@ function CopyrightLogo() {
 }
 
 export function Footer() {
-  // const handleScrollTop = (e: React.MouseEvent) =>
-  //   window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  const handleScrollTop = (e: React.MouseEvent) =>
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
   const handleContactUs = () => {
     window.scrollTo(0, document.body.scrollHeight);
@@ -54,19 +54,8 @@ export function Footer() {
   return (
     <Box bgcolor="black" css={styles.footerStyles} component="footer">
       <CopyrightLogo />
-      {/* <Container maxWidth="sm" css={styles.containerStyle}>
+      <Container maxWidth="sm" css={styles.containerStyle}>
         <Box css={styles.contactsInfoWrapperStyles}>
-          <Box>
-            <Typography
-              color="neutral.main"
-              component={RouterLink}
-              to={APP_ROUTES.CONTACT}
-              onClick={handleScrollTop}
-              css={styles.hoverableTypography}
-            >
-              Контакты
-            </Typography>
-          </Box>
           <Box
             ml={10}
             display={{ xs: "none", sm: "none", md: "flex", lg: "flex" }}
@@ -76,36 +65,19 @@ export function Footer() {
           <Box css={styles.socialIconsWrapperStyles}>
             <Box display="flex" justifyContent="space-around">
               <Box css={styles.iconBoxStyle}>
-                <IconButton
-                  target="_blank"
-                  href=""
-                >
-                  <LinkedIn css={styles.iconStyles} color="secondary" />
+                <IconButton target="_blank" href="https://www.instagram.com/zagar_/">
+                  <Instagram css={styles.iconStyles} color="secondary" />
                 </IconButton>
               </Box>
               <Box css={styles.iconBoxStyle}>
-                <IconButton
-                  target="_blank"
-                  href=""
-                >
-                  <Facebook css={styles.iconStyles} color="secondary" />
-                </IconButton>
-              </Box>
-              <Box css={styles.iconBoxStyle}>
-                <IconButton
-                  target="_blank"
-                  href=""
-                >
-                  <Twitter css={styles.iconStyles} color="secondary" />
+                <IconButton target="_blank" href="https://t.me/MKZAGAR">
+                  <Telegram css={styles.iconStyles} color="secondary" />
                 </IconButton>
               </Box>
             </Box>
           </Box>
-        </Box> */}
-      {/* </Container> */}
-      <Box css={styles.contactUsButtonContainerStyles}>
-        <ContactUsButton onClick={handleContactUs} />
-      </Box>
+        </Box>
+      </Container>
     </Box>
   );
 }
